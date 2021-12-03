@@ -1,0 +1,248 @@
+/* RESET */
+
+*,*::before, *::after{
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+/* *::selection{
+    background-color: ;
+   color: ;
+} */ 
+
+body{
+    font-family: $font-first;
+    font-size: $sizeTextp1;
+    color: $color-text;
+    line-height: 0;
+
+    /* Tamaño del scroll */
+    &::-webkit-scrollbar{
+        width: 8px;
+    }
+
+    /* Estilos barra (thumb) de scroll */
+    &::-webkit-scrollbar-thumb{
+        background: rgb(163, 163, 163);
+        border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb:active{
+        background-color: #999999;
+    }
+
+    &::-webkit-scrollbar-thumb:hover{
+        background: #b3b3b3;
+        box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Estilos track de scroll */
+    &::-webkit-scrollbar-track {
+        background: #e1e1e1;
+        border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-track:hover, 
+    &::-webkit-scrollbar-track:active {
+        background: #d4d4d4;
+    }
+
+
+}
+
+
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+    line-height: $line_height1;
+    color: $color-title;
+    font-size: var(--sizeTextt2);
+}
+p{  
+    margin: 0;
+    padding: 0;
+    color: $color-text;
+    line-height: $line_height1;
+}
+
+a{
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    line-height: $line_height1;
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button{
+    background: transparent;
+    cursor: pointer;
+    border-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+}
+
+input{
+  outline: none;
+  border-color: inherit;
+}
+
+figure{
+  margin: 0;
+}
+
+img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+
+
+/* MY CLASS */
+
+/*Definicion del limite del layout*/
+
+
+.container{
+    max-width: $main-maxwidth;
+    width: $container-width;
+
+    @include respond-to('tabletpt'){
+        width: 85%;
+    }
+
+    margin: auto;
+}
+
+.container_two{
+    width: 63%;
+    margin: auto;
+    max-width: $main-maxwidth;
+    @include respond-to('laptop'){
+        width: 70%;
+    }
+    @include respond-to('laptopst'){
+        width: 72%;
+    }
+    @include respond-to('tabletpt'){
+        width: 85%;
+    }
+}
+.container_three{
+    width: 70%;
+    margin: auto;
+    max-width: $main-maxwidth;
+}
+
+.flex, .flex-c, .flex-v, .flex-b{
+    display: flex;
+    align-items: center;
+}
+ 
+.flex-c{ 
+    justify-content: center;
+}
+
+.flex-v{
+    flex-direction: column;
+}
+
+.flex-b{
+    justify-content: space-between;
+}
+
+.btn_style{
+    padding: 2.2rem 6rem;
+    background-color: $color-blue;
+    color: $color-white;
+    font-size: var(--sizeTextt3);
+    border-radius: .5rem;
+}
+
+.orange{
+    &::before{
+        background-color: $color-orange;
+    }
+}
+// .blue{
+//     &::before{
+//         background-color: $color-blue;
+//     }
+// }
+.gray{
+    &::before{
+        background-color: $color-text2;
+    }
+}
+
+
+
+// estilos titulos principales
+// .st-title-top {
+//     margin: 0 auto;
+//     width: 80%;
+
+//     span{
+//         color: $color-prim;
+//         font-size: var(--sizeTextp4);
+//         margin: 0 0 30px 0;
+//         font-weight: 600;
+//         text-align: center;
+//     }
+
+//     h2{
+//         font-size: var(--sizeTextt2);
+//         line-height: 1.3;
+//         margin: 0 0 30px 0;
+//         text-align: center;
+//         width: 75%;
+//     }
+
+//     p{
+//         font-size: var(--sizeTextp3);
+//         text-align: center;
+//         margin: 0 0 30px 0;
+//         text-align: center;
+//         line-height: 1.4;
+//     }
+
+// }
+
+
+
+
+/*Selectores para modo de ordenar los bloques*/
+// .flex, .flex-c, .flex-v, .flex-b{
+//     display: flex;
+//     align-items: center;
+// }
+
+// .flex-c{
+//     justify-content: center;
+// }
+
+// .flex-v{
+//     flex-direction: column;
+//     justify-content: center;
+// }
+
+// .flex-b{
+//     justify-content: space-between;
+// }

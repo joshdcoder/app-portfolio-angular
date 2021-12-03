@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+    <!-- <link rel="stylesheet" href="css/styles.css" /> -->
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">
+        <section class="container header__content">
+            <div class="header__desktop flex">
+                <div class="header__logo flex-v flex-c"><a>J.</a></div>
+                <nav class="header__nav flex"><a href="">Inicio</a><a href="">Acerca de mi</a><a href="">Portafolio</a><a href="">Blog</a><a href="">Contacto</a></nav>
+            </div>
+            <div class="header__mobil flex">
+                <div class="header__iconmenu" id="btnmenu"><i class="fas fa-bars"></i></div>
+                <div class="header__mlogo"><a>J.</a></div>
+                <div class="header__mnav flex-v" id="mobilnav"><a href="">Inicio</a><a href="">Acerca de mi</a><a href="">Portafolio</a><a href="">Blog</a><a href="">Contacto</a></div>
+            </div>
+        </section>
+    </header>
+    <section class="coverBanner">
+        <div class="coverBanner__content flex">
+            <div class="coverBanner__cleft flex flex-c">
+                <div class="coverBanner__cleft__content flex-v flex-c"><span>Hola !</span>
+                    <h1>Soy Josue</h1>
+                    <p>Maquetador UI & Desarrollador Frontend Angular</p><a class="btn_style" href="#">Contáctame</a>
+                </div>
+            </div>
+            <div class="coverBanner__cright">
+                <figure> <img [src]="IMAGE_PROFILE" alt="" /></figure>
+            </div>
+        </div>
+    </section>
+    <section class="about flex">
+        <div class="about__left">
+            <figure> <img [src]="IMAGE_PROFILE2" alt="" /></figure>
+        </div>
+        <div class="about__right flex-v flex-c">
+            <article class="about__right__content">
+                <h2>Acerca de mi</h2>
+                <p> Desarrollador Frontend con más de 2 años de experiencia en la
+                    creación de sitios web y 1 año en aplicaciones web, trabajando
+                    en equipo con metodologías ágiles. Proactivo, autodidacta,
+                    flexible y apasionado por el orden y la funcionalidad del diseño.</p><a class="btn_style" href="./resources/josue-gs.pdf" download="">Descargar CV</a>
+            </article>
+        </div>
+    </section>
+    <section class="speciliazing">
+        <div class="speciliazing__content">
+            <div class="speciliazing__intro flex">
+                <h2>Especialista en</h2><span></span>
+                <p> Desarrollador Frontend con más de 2 años de experiencia en la
+                    creación de sitios web y 1 año en aplicaciones web, trabajando
+                    en equipo con metodologías ágiles. Proactivo, autodidacta,
+                    flexible y apasionado por el orden y la funcionalidad del diseño.</p>
+            </div>
+            <article class="speciliazing__group">
+                <div class="speciliazing__item bg_img">
+                    <h3>Frontend Developer</h3>
+                    <p>Capitalize on low hanging fruit to identify.</p><a>Read more</a>
+                </div>
+                <div class="speciliazing__item orange">
+                    <h3>IU Developer</h3>
+                    <p>Capitalize on low hanging fruit to identify.</p><a>Read more</a>
+                </div>
+            </article>
+        </div>
+    </section>
+    <section class="portfolio">
+        <div class="portfolio__content">
+            <div class="portfolio__intro flex container">
+                <h2>Portafolio</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste porro, quod id fugit ex facilis rerum, aliquid. Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p><a class="btn_style" href="">Ver todo</a>
+            </div>
+        </div>
+        <div class="portfolio__gsection">
+            <figure> <img [src]="IMAGE_BG_PORTFOLIO" alt="" /></figure>
+            <div class="portfolio__pgallery">
+                <div class="pgallery__container">
+                    <div class="pgallery__item">
+                        <figure><img [src]="IMAGE_PORFOLIO1" alt="" /></figure>
+                    </div>
+                    <div class="pgallery__item">
+                        <figure><img [src]="IMAGE_PORFOLIO2" alt="" /></figure>
+                    </div>
+                    <div class="pgallery__item">
+                        <figure><img [src]="IMAGE_PORFOLIO3" alt="" /></figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="hireme">
+        <div class="hireme__content flex container_two">
+            <div class="block__one">
+                <h2>Por qué contratarme ?</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti reprehenderit est recusandae at aspernatur! Praesentium ullam labore consectetur sint, blanditiis odio.</p><a class="btn_style" href="">Hire me</a>
+            </div>
+            <div class="block__two flex">
+                <div class="experience">
+                    <div class="item__work flex">
+                        <div class="work__content">
+                            <p>Frontend Developer en Slmiledu</p><span>Marzo - Noviembre 2020</span>
+                        </div>
+                    </div>
+                    <div class="item__work flex">
+                        <div class="work__content">
+                            <p>Maquetador UI en Educación Psicologica</p><span>Diciembre 2019 - Febrero 2020</span>
+                        </div>
+                    </div>
+                    <div class="item__work flex">
+                        <div class="work__content">
+                            <p>Maquetador UI en Evolucionmedia</p><span>Febrero 2018 - Enero 2020</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="customer">
+        <div class="customer__content container_two flex">
+            <div class="customer__item"></div>
+            <div class="customer__item"></div>
+            <div class="customer__item"></div>
+            <div class="customer__item"></div>
+        </div>
+    </section>
+    <section class="peoplesay">
+        <div class="peoplesay__content">
+            <div class="peoplesay__intro">
+                <h2>Lo que los profesionales dicen</h2>
+            </div>
+            <div class="peoplesay__back flex">
+                <div class="peoplesay__imgAnimation">
+                    <figure><img src="http://t.commonsupport.com/adro/images/icons/ring-circle.png" alt="" /></figure>
+                </div>
+                <div class="peoplesay__pnetwork">
+                    <app-slider-block1></app-slider-block1>
+                </div>
+                <!-- Swiper testimony -->
+                <app-card-comments></app-card-comments>
+            </div>
+        </div>
+    </section>
+    <section class="contact">
+        <div class="contact__content flex-v flex-c container_two">
+            <div class="contact__info flex-v flex-c">
+                <p>Tienes algún proyecto en mente ? Contáctame</p>
+                <h5>josuegsdev@gmail.com</h5>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__nav flex"><a href="">Inicio</a><a href="">Acerca de mi</a><a href="">Portafolio</a><a href="">Blog</a><a href="">Contacto</a></div>
+            <div class="footer__social flex flex-c"><a href="www.linkedin.com/in/josuegsuarez"> <i class="fab fa-linkedin-in"></i></a><a href=""> <i class="fab fa-github-alt"></i></a><a href="https://api.whatsapp.com/send?phone=+51948966291"> <i class="fab fa-whatsapp"></i></a><a href="https://t.me/josuegss"> <i class="fab fa-telegram-plane"></i></a></div>
+            <div class="footer__copyright flex flex-c">
+                <p> JosueGS 2021. Todos los derechos reservados &copy;</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"> </script>
+    <script src="js/scripts-min.js"></script>
+</body>
+
+</html>

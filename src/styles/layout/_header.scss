@@ -1,0 +1,96 @@
+.header{
+    margin-top: 7rem;
+    position: absolute;
+    top: 0;
+    z-index: 9;
+    // translate: tr;
+    width: 100%;
+
+    @include respond-to('tabletpt3'){
+        background-color: blue;
+        position: fixed;
+        top:0;
+        margin: 0;
+        padding: 2.3rem 0;
+    }
+
+
+    &__mobil{
+        display: none;
+
+        @include respond-to('tabletpt3'){
+            display: flex;
+        }
+    }
+
+    &__iconmenu{
+        i{
+            font-size: 3rem;
+            color: #fff;
+        }
+    }
+
+    &__mlogo{
+        a{
+            font-size: 3rem;
+            font-weight: bold;
+            color: white;
+        }
+    }
+
+    &__mnav {
+        display:    none;
+    }
+}
+
+.activeNav{
+    display: flex;
+    background-color: yellow;
+}
+
+.header__desktop{
+    gap: 6.5%;
+
+    @include respond-to('tabletpt3'){
+        display: none;
+    }
+}
+
+.header__logo{
+    background-color: $color-purpleblack;
+    width: 6.5rem;
+    height: 6.5rem;
+    border-radius: 50%;
+
+    a{
+        text-align: center;
+        color: $color-white-alter;
+        font-size: 3rem;
+        font-weight: $fw500;
+    }
+}
+
+.header__nav{
+    // gap: 7rem;
+    flex-basis: 40%;
+    justify-content: space-between;
+    @include respond-to('laptop') {
+        flex-basis: 43%;
+    }
+    @include respond-to('laptop2'){
+        flex-basis: 48%;
+    }
+    @include respond-to('laptopst'){
+        flex-basis: 51%;
+    }
+    @include respond-to('tabletpt'){
+        flex-basis: 65%;
+    }
+
+    a{
+        color:$color-purpleblack;
+        font-size: var(--sizeTextt4);
+        font-weight: $fw400;
+
+    }
+}

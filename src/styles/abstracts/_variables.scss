@@ -1,0 +1,75 @@
+
+
+/* title */
+:root{
+  --sizeTextt1: 9rem;
+  --sizeTextt2: 4rem;
+  --sizeTextt3: 2.8rem;
+  --sizeTextt4: 2.2rem;
+  --sizeTextt5: 2rem;
+  --size-email: 5rem;
+}
+
+
+/* COLORS */
+$color-bg1: #051492;
+$color-blue: #002AFF;
+$color-text: #008580;
+$color-text2: #05C5BD;
+$color-title: #3A3940;
+$color-purpleblack: #322C5C;
+$color-bg2: #FDDE33;
+$color-orange: #F97F08;
+$color-white-alter: #FCFBFC;
+$color-white: #ffffff;
+  /*Transparent*/
+$color-text-altt: rgba(5, 197, 191, 0.322);
+$color-bg1-altt: rgba(5, 19, 146, 0.604);
+
+
+$font-first: 'Roboto', sans-serif;
+
+
+/* parrafo */
+$sizeTextp1:1.8rem;
+$sizeTextp2:1.6rem;
+$sizeTextp3:1.7rem;
+
+/* breakpoint */
+$small:48rem;
+$small2:37.5rem;
+$medium:76.8rem;
+$medium2:72rem;
+
+/* margin viewport principal */
+$container-width:74%;
+$main-maxwidth:150rem;
+
+/* LINE-HEIGHT */
+$line_height1: 1;
+$line_height1_2:1.2;
+$line_height1_3:1.3;
+$line_height1_4:1.4;
+$line_height1_5:1.5;
+$line_height1_6:1.6;
+$line_height1_7:1.7;
+$line_height1_8:1.8;
+$line_height1_9:1.9;
+$line_height2:2;
+
+/* FONT-WEIGHT */
+$fw300:300;
+$fw400:400;
+$fw500:500;
+$fw600:600;
+$fw700:700;
+$fw900:900;
+
+/* Routes images */
+$border-dot-white: '../../assets/images/shapes/border-dot-white.png';
+$border-dot2: '../../assets/images/shapes/doble-border.png';
+$square-dot: '../../assets/images/shapes/square.png';
+$bg-right-noise: "../../assets/images/bg/bg-right.jpg";
+$bg-prim: '../../assets/images/fondo.jpg';
+$admin-profile: '../../assets/images/profile.png';
+$bg-sec: '../../assets/images/bg/bg3.png';

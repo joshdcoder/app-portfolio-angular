@@ -1,0 +1,46 @@
+.footer{
+    
+
+    &__content{
+        width: 30%;
+        margin: auto;
+
+        @include respond-to('laptop'){
+            width: 36%;
+        }
+        @include respond-to('laptop2'){
+            width: 37%;
+        }
+        @include respond-to('tabletld'){
+            width: 43%;
+        }
+        @include respond-to('tabletpt'){
+            width: 50%;
+        }
+        @include respond-to('tabletpt3'){
+            width: 66%;
+        }
+    }
+
+    &__nav{
+        padding: 0 0 5rem 0;
+        justify-content: space-between;
+
+        a{
+            font-size: var(--sizeTextt4);
+            color: $color-text2;
+        }
+    }
+    &__social{
+        gap: 3rem;
+        a{
+            i{
+                font-size: var(--sizeTextt3);
+            }
+        }
+    }
+    &__copyright{
+        // font-size: $sizeText3;
+        padding: 6rem 0;
+    }
+}

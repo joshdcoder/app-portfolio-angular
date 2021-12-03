@@ -1,0 +1,178 @@
+
+  @mixin box-sizing($type) {
+    -webkit-box-sizing: $type;
+    -moz-box-sizing: $type;
+    box-sizing: $type;
+  }
+
+  @mixin font-size($size) {
+    // font-size: $size;
+    font-size: ($size / 16px) * 1rem;
+  }
+  
+  @mixin getBackgroundImage($img){
+    background-image: url($img);
+  }
+
+  @mixin gradient($start-color, $end-color, $orientation) {
+    background: $start-color;
+    @if $orientation == vertical {
+      // vertical
+      background: -moz-linear-gradient(top, $start-color 0%, $end-color 100%);
+      background: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0%, $start-color),
+        color-stop(100%, $end-color)
+      );
+      background: -webkit-linear-gradient(top, $start-color 0%, $end-color 100%);
+      background: -o-linear-gradient(top, $start-color 0%, $end-color 100%);
+      background: -ms-linear-gradient(top, $start-color 0%, $end-color 100%);
+      background: linear-gradient(to bottom, $start-color 0%, $end-color 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start-color', endColorstr='$end-color',GradientType=0 );
+    } @else if $orientation == horizontal {
+      // horizontal
+      background: -moz-linear-gradient(left, $start-color 0%, $end-color 100%);
+      background: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        color-stop(0%, $start-color),
+        color-stop(100%, $end-color)
+      );
+      background: -webkit-linear-gradient(left, $start-color 0%, $end-color 100%);
+      background: -o-linear-gradient(left, $start-color 0%, $end-color 100%);
+      background: -ms-linear-gradient(left, $start-color 0%, $end-color 100%);
+      background: linear-gradient(to right, $start-color 0%, $end-color 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start-color', endColorstr='$end-color',GradientType=1 );
+    } @else {
+      // radial
+      background: -moz-radial-gradient(
+        center,
+        ellipse cover,
+        $start-color 0%,
+        $end-color 100%
+      );
+      background: -webkit-gradient(
+        radial,
+        center center,
+        0px,
+        center center,
+        100%,
+        color-stop(0%, $start-color),
+        color-stop(100%, $end-color)
+      );
+      background: -webkit-radial-gradient(
+        center,
+        ellipse cover,
+        $start-color 0%,
+        $end-color 100%
+      );
+      background: -o-radial-gradient(
+        center,
+        ellipse cover,
+        $start-color 0%,
+        $end-color 100%
+      );
+      background: -ms-radial-gradient(
+        center,
+        ellipse cover,
+        $start-color 0%,
+        $end-color 100%
+      );
+      background: radial-gradient(
+        ellipse at center,
+        $start-color 0%,
+        $end-color 100%
+      );
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start-color', endColorstr='$end-color',GradientType=1 );
+    }
+  }
+
+  $large: 1390px;
+  $large2: 1024px;
+  $medium: 767px;
+  $small: 480px;
+
+  @mixin bp-large($large) {
+    @media only screen and (max-width: $large) {
+      @content;
+    }
+  }
+
+  @mixin bp-medium($medium) {
+    @media only screen and (max-width: $medium) {
+      @content;
+    }
+  }
+
+  @mixin bp-small($small) {
+    @media only screen and (max-width: $small) {
+      @content;
+    }
+  }
+
+
+  @mixin font-size($size) {
+    // font-size: $size;
+    font-size: ($size / 16px) * 1rem;
+  }
+
+
+  $breakpoints: (
+
+    // mobile - portrait
+  'mobilept':  ( max-width: 320px ),
+
+  // mobile - landscape
+  'mobileld2':  ( max-width: 425px ),
+
+  // mobile - landscape
+  'mobileld':  ( max-width: 667px ),
+
+  // tablet - portrait-three
+  'tabletpt3':  ( max-width: 768px ),
+
+  // tablet - portrait-two
+  'tabletpt2':  ( max-width: 834px ),
+
+  // tablet - portrait-one
+  'tabletpt': ( max-width: 992px ),
+
+  // tablet - landscape
+  'tabletIpad':  ( max-width: 1024px ),
+
+  // tablet - landscape
+  'tabletld':  ( max-width: 1200px ),
+
+  // laptop - displays standar
+  'laptopst':  ( max-width: 1366px ),
+
+  // laptop - displays 1440
+  'laptop2':  ( max-width: 1440px ),
+
+  // laptop - displays 1920
+  'laptop':  ( max-width: 1536px )
+  ) !default;
+
+  // Mixin to manage responsive breakpoints
+// @author Kitty Giraudel
+// @param {String} $breakpoint - Breakpoint name
+// @require $breakpoints
+
+  @mixin respond-to($breakpoint) {
+    // If the key exists in the map
+    @if map-has-key($breakpoints, $breakpoint) {
+      // Prints a media query based on the value
+      @media #{inspect(map-get($breakpoints, $breakpoint))} {
+        @content;
+      }
+    }
+
+    // If the key doesn't exist in the map
+    @else {
+      @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+          + "Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+  }
