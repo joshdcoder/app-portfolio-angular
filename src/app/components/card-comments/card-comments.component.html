@@ -1,1 +1,55 @@
-<p>card-comments works!</p>
+<swiper #swiper class="swiper swiper-container" (swiper)="onSwiper($event)" (slideChange)="onSlideChange()"
+  [loop]="true" [allowTouchMove]="false" [autoplay]="{ delay: 5000, disableOnInteraction: false }" [navigation]="true">
+  <ng-template class="swiper-slide" swiperSlide *ngFor="let item of profileItems">
+    <div class="content_testimonial">
+      <p class="description_testimonial">{{ item.message }}</p>
+      <div class="item_person flex">
+        <figure><img [src]="item.image" alt="" /></figure>
+        <div class="item_person_date">
+          <h4>{{ item.title }}</h4>
+          <p>{{ item.office }}</p>
+        </div>
+      </div>
+    </div>
+
+  </ng-template>
+
+  <div class="item_arrows flex">
+    <div class="swiper-button-prev">
+      <figure> <img [src]="ARROW_LEFT" alt="arrow_left" /></figure>
+    </div>
+    <div class="swiper-button-next">
+      <figure> <img [src]="ARROW_RIGHT" alt="arrow_right" /></figure>
+    </div>
+  </div>
+
+</swiper>
+
+
+
+<!-- <div class="container_testimonial flex">
+  <div class="swiper swiper-container">
+      <div class="swiper-wrapper">
+          <div class="swiper-slide" *ngFor="let item of profileItems">
+              <div class="content_testimonial">
+                  <p class="description_testimonial">{{ item.message }}</p>
+                  <div class="item_person flex">
+                      <figure><img [src]="item.image" alt="" /></figure>
+                      <div class="item_person_date">
+                          <h4>{{ item.title }}</h4>
+                          <p>{{ item.office }}</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="item_arrows flex">
+          <div class="swiper-button-prev">
+              <figure> <img [src]="ARROW_LEFT" alt="arrow_left" /></figure>
+          </div>
+          <div class="swiper-button-next">
+              <figure> <img [src]="ARROW_RIGHT" alt="arrow_right" /></figure>
+          </div>
+      </div>
+  </div>
+</div> -->
