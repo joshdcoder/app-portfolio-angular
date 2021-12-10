@@ -12,7 +12,9 @@ import SwiperCore, {
   Zoom,
   Autoplay,
   Thumbs,
+  EffectFade,
   Controller } from 'swiper';
+
 SwiperCore.use([
     Navigation,
     Pagination,
@@ -22,6 +24,7 @@ SwiperCore.use([
     Zoom,
     Autoplay,
     Thumbs,
+    EffectFade,
     Controller
   ]);
 
@@ -58,18 +61,11 @@ export class CardCommentsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSwiper($swiper:any) {
-    console.log($swiper);
-  }
-  onSlideChange() {
-    console.log('slide change');
-  }
-
-  slideNext(){
-    this.swiper?.swiperRef.slideNext(100);
-  }
-  slidePrev(){
-    this.swiper?.swiperRef.slidePrev(100);
-  }
+  // onSwiper($swiper:any) {
+  //   console.log($swiper);
+  // }
+  // onSlideChange() {
+  //   console.log('slide change');
+  // }
 
 }

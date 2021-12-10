@@ -20,10 +20,13 @@ export class SharedConstants {
     }
   }
 
-  static get PROFILES_PATHS(){
+  // profiles works
+  static get PROFILESWK_PATHS(){
     return{
-      CHRISTIAN:'./assets/images/perfiles/cristian.jfif'
-
+      teamwork1:'./assets/images/bg/teamwork.png',
+      teamwork2:'./assets/images/bg/teamwork_2.png',
+      teamwork3:'./assets/images/bg/teamwork_3.png',
+      teamwork4:'./assets/images/bg/teamwork_4.png',
     }
   }
 }

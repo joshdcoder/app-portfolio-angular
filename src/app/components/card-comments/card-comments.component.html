@@ -1,5 +1,5 @@
-<swiper #swiper class="swiper swiper-container" (swiper)="onSwiper($event)" (slideChange)="onSlideChange()"
-  [loop]="true" [allowTouchMove]="false" [autoplay]="{ delay: 5000, disableOnInteraction: false }" [navigation]="true">
+<swiper #swiper class="swiper swiper-container"
+  [loop]="true" [allowTouchMove]="false" [spaceBetween]="100" [autoplay]="{ delay: 5000, disableOnInteraction: false }" [navigation]="true" effect="slide">
   <ng-template class="swiper-slide" swiperSlide *ngFor="let item of profileItems">
     <div class="content_testimonial">
       <p class="description_testimonial">{{ item.message }}</p>
@@ -13,18 +13,7 @@
     </div>
 
   </ng-template>
-
-  <div class="item_arrows flex">
-    <div class="swiper-button-prev">
-      <figure> <img [src]="ARROW_LEFT" alt="arrow_left" /></figure>
-    </div>
-    <div class="swiper-button-next">
-      <figure> <img [src]="ARROW_RIGHT" alt="arrow_right" /></figure>
-    </div>
-  </div>
-
 </swiper>
-
 
 
 <!-- <div class="container_testimonial flex">

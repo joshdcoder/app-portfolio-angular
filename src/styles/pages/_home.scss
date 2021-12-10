@@ -698,24 +698,26 @@
     padding: 8rem 0 6rem 0;
     height: 100%;
     &__content{
-        width: 82%;
+      position: relative;
+        // width: 82%;
         // max-width: 1257px;
-        margin-left: auto;
-        justify-content: space-between;
+        // margin-left: auto;
+        // justify-content: space-between;
 
-        @include respond-to('laptopst'){
-            width: 84%;
-        }
-        @include respond-to('tabletpt'){
-            width: 85%;
-            margin: 0 auto;
-        }
-        @include respond-to('tabletpt3'){
-            width: 100%;
-        }
+        // @include respond-to('laptopst'){
+        //     width: 84%;
+        // }
+        // @include respond-to('tabletpt'){
+        //     width: 85%;
+        //     margin: 0 auto;
+        // }
+        // @include respond-to('tabletpt3'){
+        //     width: 100%;
+        // }
     }
     &__intro{
-        flex-basis: 50%;
+        // flex-basis: 50%;
+        margin-bottom: 2.5rem;
 
         @include respond-to('tabletpt3'){
             flex-basis: 100%;
@@ -808,15 +810,16 @@
     }
 
     &__imgAnimation{
+      flex-basis: 46%;
         img{
-            width: 58rem;
+            width: 60rem;
             height: 100%;
             animation: fa-spin 25s infinite alternate;
         }
     }
 
     &__pnetwork{
-        width: 46%;
+        flex-basis: 46%;
 
         @include respond-to('tabletpt'){
             display: none;
@@ -966,17 +969,32 @@
     width: 12px;
 }
 
-.peoplesay__back{
-    position: relative;
+.peoplesay__banimation{
+  margin-top: 6rem;
+  position: absolute;
+  top: 0;
+  left:0 ;
+  width: calc(100vw - 8px);
 }
 
+.peoplesay__anicontent{
+  // width: 60%;
+  margin-left: auto;
+  background: yellow;
+  // max-width: 1500px;
+  display: flex;
+
+}
+
+
 .container_testimonial{
-    position: absolute;
+    position: relative;
     top: 0;
+    padding: 9rem 0;
     left: -4rem;
-    width: 100%;
-    height: 100%;
-    justify-content: flex-start;
+    // width: 100%;
+    // height: 100%;
+    // justify-content: flex-start;
 
     @include respond-to('tabletpt3'){
         left: 0;
@@ -1055,32 +1073,3 @@
 
 }
 
-.swiper-container {
-    padding: 4rem;
-    height: 50rem;
-  }
-
-  // .swiper-button-next, .swiper-button-prev{
-  //   position: relative;
-  //   top:0;
-  //   left:0;
-  //   right:0;
-  //   width: 60px;
-  //   border-radius: 50%;
-  //   height: 60px;
-  //   transition: all 300ms ease;
-
-  //   &:hover{
-  //     box-shadow: 0 24px 24px rgba(187, 187, 187, 0.75);
-  //   //   background-color: $color-bg1;
-  //   }
-  //   span{
-  //     display: none;
-  //   }
-  //   &::after, &::before{
-  //     display: none;
-  //   }
-  //   figure{
-  //     width: 4.7rem;
-  //   }
-  // }

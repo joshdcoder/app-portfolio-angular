@@ -1,0 +1,67 @@
+/*==  CARDS COMMENTS   ==**/
+.container_testimonial {
+
+  .swiper-container {
+    padding: 4rem !important;
+    height: 50rem;
+    // background: blue;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: 74% !important;
+    width: 60px !important;
+    border-radius: 50%;
+    height: 60px !important;
+    // background: yellow;
+    transition: all 300ms ease;
+    // left: initial !important;
+    // right: 25% !important;
+
+    &:hover {
+      box-shadow: 0 24px 24px rgba(187, 187, 187, 0.75);
+      //   background-color: $color-bg1;
+    }
+
+
+
+
+    // figure{
+    //   width: 4.7rem;
+    // }
+  }
+
+  .swiper-button-prev {
+    left: initial !important;
+    right: 25% !important;
+
+    &::after {
+      content: '' !important;
+      @include getBackgroundImage($arrow-left);
+      width: 42px !important;
+      height: 20px !important;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+  }
+
+  .swiper-button-next {
+    left: initial !important;
+    right: 18% !important;
+
+    &::after {
+      content: '' !important;
+      @include getBackgroundImage($arrow-right);
+      width: 42px !important;
+      height: 20px !important;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+
+      // background-position:  center;
+    }
+  }
+
+
+}
