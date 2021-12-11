@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 //My modules
-// import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 import { SwiperModule} from 'swiper/angular';
 
 // My components
@@ -18,8 +17,7 @@ import { SliderBlock1Component } from './slider-block1/slider-block1.component';
   ],
   imports: [
     CommonModule,
-    SwiperModule,
-    // NgxUsefulSwiperModule
+    SwiperModule
   ],
   exports:[
     CardCommentsComponent,

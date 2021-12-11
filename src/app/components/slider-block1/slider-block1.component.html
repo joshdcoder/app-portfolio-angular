@@ -1,9 +1,9 @@
-<swiper #swiperFaded (swiper)="onSwiper($event)" (slideChange)="onSlideChange()"
-[loop]="true" [allowTouchMove]="false" [autoplay]="{ delay: 7000, disableOnInteraction: false }" [speed]="2000" [navigation]="true" effect="fade">
+<swiper #swiperFaded
+[loop]="true" [allowTouchMove]="true" [autoplay]="{ delay: 7000, disableOnInteraction: false }" [speed]="2000" effect="fade">
   <ng-template swiperSlide>
     <figure><img [src]="TEAMWORK1" alt="" /></figure>
   </ng-template>
-  <ng-template swiperSlide>
+  <!-- <ng-template swiperSlide>
     <figure><img [src]="TEAMWORK2" alt="" /></figure>
   </ng-template>
   <ng-template swiperSlide>
@@ -11,5 +11,5 @@
   </ng-template>
   <ng-template swiperSlide>
     <figure><img [src]="TEAMWORK4" alt="" /></figure>
-  </ng-template>
+  </ng-template> -->
 </swiper>

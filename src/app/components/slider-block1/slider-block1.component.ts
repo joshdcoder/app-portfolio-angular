@@ -48,12 +48,12 @@ export class SliderBlock1Component implements OnInit {
   ngOnInit(): void {
   }
 
-  onSwiper($swiper:any){
-    console.log($swiper);
-  }
+  // onSwiper($swiper:any){
+  //   console.log($swiper);
+  // }
 
-  onSlideChange(){
-    console.log('slide change');
-  }
+  // onSlideChange(){
+  //   console.log('slide change');
+  // }
 
 }

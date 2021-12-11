@@ -16,18 +16,28 @@
     <section class="container header__content">
       <div class="header__desktop flex">
         <div class="header__logo flex-v flex-c"><a>J.</a></div>
-        <nav class="header__nav flex"><a href="">Inicio</a><a href="">Acerca de mi</a><a href="">Portafolio</a><a
-            href="">Blog</a><a href="">Contacto</a></nav>
+        <nav class="header__nav flex">
+          <div (click)="Navigate(inicio)">Inicio</div>
+          <div (click)="Navigate(acerca)">Acerca de mi</div>
+          <div (click)="Navigate(portafolio)">Portafolio</div>
+          <div>Blog</div>
+          <div (click)="Navigate(contactp)">Contacto</div>
+        </nav>
       </div>
       <div class="header__mobil flex">
         <div class="header__iconmenu" id="btnmenu"><i class="fas fa-bars"></i></div>
         <div class="header__mlogo"><a>J.</a></div>
-        <div class="header__mnav flex-v" id="mobilnav"><a href="">Inicio</a><a href="">Acerca de mi</a><a
-            href="">Portafolio</a><a href="">Blog</a><a href="">Contacto</a></div>
+        <div class="header__mnav flex-v" id="mobilnav">
+          <div (click)="'Navigate(inicio)'">Inicio</div>
+          <div (click)="'Navigate(acerca)'">Acerca de mi</div>
+          <div (click)="'Navigate(portafolio)'">Portafolio</div>
+          <div>Blog</div>
+          <div (click)="'Navigate(contacto)'">Contacto</div>
+        </div>
       </div>
     </section>
   </header>
-  <section class="coverBanner">
+  <section class="coverBanner" #inicio>
     <div class="coverBanner__content flex">
       <div class="coverBanner__cleft flex flex-c">
         <div class="coverBanner__cleft__content flex-v flex-c"><span>Hola !</span>
@@ -40,7 +50,7 @@
       </div>
     </div>
   </section>
-  <section class="about flex">
+  <section class="about flex" #acerca>
     <div class="about__left">
       <figure> <img [src]="IMAGE_PROFILE2" alt="" /></figure>
     </div>
@@ -55,7 +65,7 @@
       </article>
     </div>
   </section>
-  <section class="speciliazing">
+  <section class="speciliazing" id="especizalizacion" (click)="onClickScroll('especizalizacion')">
     <div class="speciliazing__content">
       <div class="speciliazing__intro flex">
         <h2>Especialista en</h2><span></span>
@@ -76,7 +86,7 @@
       </article>
     </div>
   </section>
-  <section class="portfolio">
+  <section class="portfolio" #portafolio>
     <div class="portfolio__content">
       <div class="portfolio__intro flex container">
         <h2>Portafolio</h2>
@@ -101,7 +111,7 @@
       </div>
     </div>
   </section>
-  <section class="hireme">
+  <section class="hireme" id="contratarme" (click)="onClickScroll('contratarme')">
     <div class="hireme__content flex container_two">
       <div class="block__one">
         <h2>Por qué contratarme ?</h2>
@@ -129,7 +139,7 @@
       </div>
     </div>
   </section>
-  <section class="customer">
+  <section class="customer" id="clientes">
     <div class="customer__content container_two flex">
       <div class="customer__item"></div>
       <div class="customer__item"></div>
@@ -137,7 +147,7 @@
       <div class="customer__item"></div>
     </div>
   </section>
-  <section class="peoplesay">
+  <section class="peoplesay" id="testimonios" (click)="onClickScroll('testimonios')">
     <div class="peoplesay__content">
       <div class="container_two">
         <div class="peoplesay__intro">
@@ -160,15 +170,15 @@
       </div>
     </div>
   </section>
-  <section class="prueba-test">
+  <!-- <section class="prueba-test">
       <div class="container_two">
         <h1>slide fade</h1>
         <div class="container_testimonial">
-          <!-- <app-slider-block1></app-slider-block1> -->
+          <app-slider-block1></app-slider-block1>
         </div>
       </div>
-    </section>
-  <section class="contact">
+    </section> -->
+  <section class="contact" #contactp>
     <div class="contact__content flex-v flex-c container_two">
       <div class="contact__info flex-v flex-c">
         <p>Tienes algún proyecto en mente ? Contáctame</p>
@@ -178,8 +188,13 @@
   </section>
   <footer class="footer">
     <div class="footer__content">
-      <div class="footer__nav flex"><a href="">Inicio</a><a href="">Acerca de mi</a><a href="">Portafolio</a><a
-          href="">Blog</a><a href="">Contacto</a></div>
+      <div class="footer__nav flex">
+        <div (click)="Navigate(inicio)">Inicio</div>
+          <div (click)="Navigate(acerca)">Acerca de mi</div>
+          <div (click)="Navigate(portafolio)">Portafolio</div>
+          <div>Blog</div>
+          <div (click)="Navigate(contactp)">Contacto</div>
+      </div>
       <div class="footer__social flex flex-c"><a href="www.linkedin.com/in/josuegsuarez"> <i
             class="fab fa-linkedin-in"></i></a><a href=""> <i class="fab fa-github-alt"></i></a><a
           href="https://api.whatsapp.com/send?phone=+51948966291"> <i class="fab fa-whatsapp"></i></a><a

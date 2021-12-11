@@ -810,7 +810,7 @@
     }
 
     &__imgAnimation{
-      flex-basis: 46%;
+
         img{
             width: 60rem;
             height: 100%;
@@ -819,13 +819,12 @@
     }
 
     &__pnetwork{
-        flex-basis: 46%;
-
         @include respond-to('tabletpt'){
             display: none;
         }
         figure{
-            width: max-content;
+            width: 87%;
+            margin-left: auto;
         }
     }
 
@@ -979,10 +978,11 @@
 
 .peoplesay__anicontent{
   // width: 60%;
-  margin-left: auto;
-  background: yellow;
+  // margin-right: auto;
   // max-width: 1500px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 742px 575px;
+  justify-content:flex-end;
 
 }
 
@@ -995,6 +995,7 @@
     // width: 100%;
     // height: 100%;
     // justify-content: flex-start;
+    z-index: 9;
 
     @include respond-to('tabletpt3'){
         left: 0;

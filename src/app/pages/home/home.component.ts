@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { SharedConstants } from 'src/app/shared/shared.constants';
 
@@ -15,11 +16,19 @@ export class HomeComponent implements OnInit {
   IMAGE_PROFILE:string = SharedConstants.PATHS.IMAGE_PROFILE;
   IMAGE_PROFILE2:string = SharedConstants.PATHS.IMAGE_PROFILE2;
 
-  constructor() { }
+  constructor(private viewportScroller: ViewportScroller) {
+
+  }
 
   ngOnInit(): void {
   }
 
+  onClickScroll(elId:string):void{
+    // this.viewportScroller.scrollToAnchor(elId);
+  }
 
+  Navigate(elem:HTMLElement){
+    elem.scrollIntoView({ behavior: 'smooth' });
+  }
 
 }
