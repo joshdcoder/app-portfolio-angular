@@ -39,7 +39,7 @@
     }
 
     &__mnav {
-        display:    none;
+        display:none;
     }
 }
 
@@ -87,10 +87,10 @@
         flex-basis: 65%;
     }
 
-    a{
+    div{
         color:$color-purpleblack;
         font-size: var(--sizeTextt4);
         font-weight: $fw400;
-
+        cursor: pointer;
     }
 }

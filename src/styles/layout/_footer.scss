@@ -1,5 +1,5 @@
 .footer{
-    
+
 
     &__content{
         width: 30%;
@@ -26,9 +26,10 @@
         padding: 0 0 5rem 0;
         justify-content: space-between;
 
-        a{
+        div{
             font-size: var(--sizeTextt4);
             color: $color-text2;
+            cursor: pointer;
         }
     }
     &__social{

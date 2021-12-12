@@ -27,13 +27,13 @@
       <div class="header__mobil flex">
         <div class="header__iconmenu" id="btnmenu"><i class="fas fa-bars"></i></div>
         <div class="header__mlogo"><a>J.</a></div>
-        <div class="header__mnav flex-v" id="mobilnav">
+        <nav class="header__mnav flex-v" id="mobilnav">
           <div (click)="'Navigate(inicio)'">Inicio</div>
           <div (click)="'Navigate(acerca)'">Acerca de mi</div>
           <div (click)="'Navigate(portafolio)'">Portafolio</div>
           <div>Blog</div>
           <div (click)="'Navigate(contacto)'">Contacto</div>
-        </div>
+        </nav>
       </div>
     </section>
   </header>
@@ -188,13 +188,13 @@
   </section>
   <footer class="footer">
     <div class="footer__content">
-      <div class="footer__nav flex">
+      <nav class="footer__nav flex">
         <div (click)="Navigate(inicio)">Inicio</div>
-          <div (click)="Navigate(acerca)">Acerca de mi</div>
-          <div (click)="Navigate(portafolio)">Portafolio</div>
-          <div>Blog</div>
-          <div (click)="Navigate(contactp)">Contacto</div>
-      </div>
+        <div (click)="Navigate(acerca)">Acerca de mi</div>
+        <div (click)="Navigate(portafolio)">Portafolio</div>
+        <div>Blog</div>
+        <div (click)="Navigate(contactp)">Contacto</div>
+      </nav>
       <div class="footer__social flex flex-c"><a href="www.linkedin.com/in/josuegsuarez"> <i
             class="fab fa-linkedin-in"></i></a><a href=""> <i class="fab fa-github-alt"></i></a><a
           href="https://api.whatsapp.com/send?phone=+51948966291"> <i class="fab fa-whatsapp"></i></a><a
